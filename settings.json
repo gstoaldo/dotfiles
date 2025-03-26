@@ -1,12 +1,18 @@
 {
-  "breadcrumbs.symbolPath": "last",
-  "debug.openDebug": "neverOpen",
   "editor.cursorSurroundingLines": 999, // cursor always in the center of the screen
   "editor.detectIndentation": false,
   "editor.folding": false,
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.lineHeight": 1.75,
+  // "editor.fontFamily": "Fira Code",
+  "editor.lineDecorationsWidth": 40,
+  "editor.fontFamily": "'Monaspace Neon Light', monospace",
+  "editor.fontLigatures": "'calt', 'liga'",
+  // "editor.fontFamily": "Iosevka Light Extended",
+  // "editor.fontLigatures": false,
   "editor.formatOnSave": true,
-  "editor.lightbulb.enabled": false,
+  "editor.lightbulb.enabled": "off",
   "editor.lineHeight": 1.75,
   "editor.minimap.enabled": false,
   "editor.rulers": [
@@ -14,25 +20,86 @@
   ],
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
-  "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "git.mergeEditor": false,
   "search.quickOpen.history.filterSortOrder": "recency",
   "search.searchEditor.defaultNumberOfContextLines": 5,
   "testing.automaticallyOpenPeekView": "never",
-  "window.nativeFullScreen": false,
+  // "window.nativeFullScreen": false,
+  // "window.title": "${activeEditorMedium}${separator}${rootName}${separator}${profileName}",
   "window.newWindowDimensions": "inherit",
-  "window.title": "${activeEditorMedium}${separator}${rootName}${separator}${profileName}",
-  "workbench.colorTheme": "GitHub Light",
-  "workbench.sideBar.location": "right",
-  "workbench.editor.showTabs": false,
-  "diffEditor.renderSideBySide": false,
-  "editor.lineNumbers": "off",
-  "workbench.statusBar.visible": false,
-  "workbench.activityBar.visible": false
+  "window.nativeFullScreen": true,
+  "window.title": "${rootNameShort}",
   // Drag the following panels from the "Activity Bar":
   // - "Search"
   // - "Source Control"
   // - "Variables" and "Breakpoints" into "Debug Console"
+  //
+  //
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
+  },
+  "python.formatting.provider": "black",
+  "files.associations": {
+    "*.env.*": "env"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "go.enableCodeLens": {
+    "runtest": false
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // gitlens
+  "gitlens.currentLine.enabled": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.hovers.enabled": false,
+  "gitlens.views.branches.branches.layout": "list",
+  "gitlens.menus": {
+    "editorGroup": false
+  },
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "go.toolsManagement.autoUpdate": true,
+  "debug.internalConsoleOptions": "openOnSessionStart",
+  "outline.showBooleans": false,
+  "outline.showConstants": false,
+  "outline.showStrings": false,
+  //
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/src/mocks": true,
+  },
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false,
+  "workbench.colorTheme": "GitHub Light",
+  "editor.stickyScroll.enabled": false,
+  "zenMode.showTabs": "none",
+  "workbench.editor.tabActionCloseVisibility": false,
+  "diffEditor.renderSideBySide": false,
+  "breadcrumbs.symbolPath": "off",
+  "python.analysis.typeCheckingMode": "standard",
+  "window.zoomPerWindow": false,
+  "debug.toolBarLocation": "docked",
+  "workbench.sideBar.location": "right",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.showTabs": "none",
+  "editor.accessibilitySupport": "off",
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false,
 }
