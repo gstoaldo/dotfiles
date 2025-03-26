@@ -5,11 +5,11 @@
   ],
   "rules": [
     {
-      "description": "option for delimiter layer",
+      "description": "option for delimiter layer [v2]",
       "manipulators": [
         {
           "from": {
-            "key_code": "u",
+            "key_code": "i",
             "modifiers": {
               "mandatory": [
                 "option"
@@ -27,7 +27,7 @@
         },
         {
           "from": {
-            "key_code": "i",
+            "key_code": "o",
             "modifiers": {
               "mandatory": [
                 "option"
@@ -45,7 +45,7 @@
         },
         {
           "from": {
-            "key_code": "j",
+            "key_code": "k",
             "modifiers": {
               "mandatory": [
                 "option"
@@ -62,7 +62,7 @@
         },
         {
           "from": {
-            "key_code": "k",
+            "key_code": "l",
             "modifiers": {
               "mandatory": [
                 "option"
@@ -79,7 +79,7 @@
         },
         {
           "from": {
-            "key_code": "m",
+            "key_code": "comma",
             "modifiers": {
               "mandatory": [
                 "option"
@@ -97,7 +97,7 @@
         },
         {
           "from": {
-            "key_code": "comma",
+            "key_code": "period",
             "modifiers": {
               "mandatory": [
                 "option"
@@ -161,44 +161,6 @@
           "to": [
             {
               "key_code": "hyphen",
-              "modifiers": "shift"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "j",
-            "modifiers": {
-              "mandatory": [
-                "option",
-                "shift"
-              ],
-              "optional": "caps_lock"
-            }
-          },
-          "to": [
-            {
-              "key_code": "comma",
-              "modifiers": "shift"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "k",
-            "modifiers": {
-              "mandatory": [
-                "option",
-                "shift"
-              ],
-              "optional": "caps_lock"
-            }
-          },
-          "to": [
-            {
-              "key_code": "period",
               "modifiers": "shift"
             }
           ],

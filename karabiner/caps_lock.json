@@ -273,6 +273,115 @@
           "type": "basic"
         }
       ]
+    },
+    {
+      "description": "Hyper key: media keys [v2]",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option",
+                "right_command"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "consumer_key_code": "volume_decrement"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option",
+                "right_command"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "consumer_key_code": "volume_increment"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option",
+                "right_command"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "consumer_key_code": "fast_forward"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option",
+                "right_command"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "consumer_key_code": "rewind"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "consumer_key_code": "play_or_pause"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
     }
   ]
 }
