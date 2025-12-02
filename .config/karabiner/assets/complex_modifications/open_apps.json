@@ -1,0 +1,245 @@
+{
+  "title": "Apps/Media layer",
+  "rules": [
+    {
+      "description": "Hyper key: open apps",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Visual Studio Code'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["com.google.Chrome"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Google Chrome'"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Google Chrome'"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Visual Studio Code'"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Slack"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Spotify"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Hyper key: media keys",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option",
+                "right_command"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "consumer_key_code": "volume_decrement"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option",
+                "right_command"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "consumer_key_code": "volume_increment"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option",
+                "right_command"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "consumer_key_code": "fast_forward"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option",
+                "right_command"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "consumer_key_code": "rewind"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_shift",
+                "left_option"
+              ],
+              "optional": "caps_lock"
+            }
+          },
+          "to": [
+            {
+              "consumer_key_code": "play_or_pause"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
