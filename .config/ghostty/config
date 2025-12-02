@@ -1,0 +1,13 @@
+window-save-state = always
+font-family = Monaspace Neon Light
+font-size = 18
+adjust-cell-height = 50%
+window-padding-balance = true
+# theme = Vague
+window-padding-x = 32
+window-padding-y = 8
+mouse-hide-while-typing = true
+
+theme = TokyoNight Night
+theme = Catppuccin Latte
+theme = Catppuccin Mocha
