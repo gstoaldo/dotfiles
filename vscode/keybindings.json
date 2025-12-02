@@ -1,0 +1,460 @@
+[
+  // Expand selection
+  // It allows you to quickly select words, content between parentheses, square brackets, curly braces, etc
+  {
+    "key": "cmd+e",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+shift+e",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  // Navigation
+  // Navigate/select to next blank line
+  {
+    "key": "alt+down",
+    "command": "cursorMove",
+    "args": {
+      "to": "nextBlankLine"
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+shift+down",
+    "command": "cursorMove",
+    "args": {
+      "to": "nextBlankLine",
+      "select": true
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+up",
+    "command": "cursorMove",
+    "args": {
+      "to": "prevBlankLine"
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+shift+up",
+    "command": "cursorMove",
+    "args": {
+      "to": "prevBlankLine",
+      "select": true
+    },
+    "when": "textInputFocus"
+  },
+  // Navigate/select by N lines
+  {
+    "key": "cmd+down",
+    "command": "cursorMove",
+    "args": {
+      "to": "down",
+      "by": "line",
+      "value": 5
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+shift+down",
+    "command": "cursorMove",
+    "args": {
+      "to": "down",
+      "by": "line",
+      "value": 5,
+      "select": true
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+up",
+    "command": "cursorMove",
+    "args": {
+      "to": "up",
+      "by": "line",
+      "value": 5
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+shift+up",
+    "command": "cursorMove",
+    "args": {
+      "to": "up",
+      "by": "line",
+      "value": 5,
+      "select": true
+    },
+    "when": "textInputFocus"
+  },
+  // Move to start/end of file (cmd+up, cmd+down) is used to navigate by N lines
+  {
+    "key": "cmd+shift+k",
+    "command": "cursorBottom",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+shift+i",
+    "command": "cursorTop",
+    "when": "editorFocus"
+  },
+  // Move to next change in file
+  {
+    "key": "cmd+k cmd+n",
+    "command": "workbench.action.editor.nextChange",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "cmd+k cmd+n",
+    "command": "workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible"
+  },
+  // Show/hide Panels
+  {
+    "key": "cmd+k cmd+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "cmd+k cmd+g",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "cmd+k cmd+d",
+    "command": "runCommands",
+    "args": {
+      "commands": ["debug.openView", "workbench.panel.repl.view.focus"]
+    }
+  },
+  {
+    "key": "cmd+k cmd+x",
+    "command": "workbench.extensions.action.showEnabledExtensions"
+  },
+  {
+    "key": "cmd+k cmd+a",
+    "command": "workbench.panel.chat.view.copilot.focus"
+  },
+  {
+    "key": "cmd+j",
+    "command": "terminal.focus"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.togglePanel",
+    "when": "panelFocus"
+  },
+  {
+    "key": "cmd+k cmd+j",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "cmd+shift+j",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.closePanel",
+        "workbench.action.closeSidebar"
+      ]
+    }
+  },
+  // {
+  //   "key": "cmd+k cmd+j",
+  //   "command": "workbench.action.toggleMaximizedPanel",
+  // },
+  // Navigate between pinned files
+  // This will close all tabs, leaving only the pinned ones. This command will then cycle through only the 'visible/pinned' tabs.
+  {
+    "key": "cmd+k cmd+p",
+    "command": "workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned"
+  },
+  {
+    "key": "cmd+k cmd+p",
+    "command": "workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.showAllEditorsByMostRecentlyUsed"
+  },
+  {
+    "key": "alt+p",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        // "workbench.action.closeAllEditors",
+        "workbench.action.showAllEditorsByMostRecentlyUsed"
+      ]
+    }
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "alt+shift+p",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.closeAllEditors",
+        "workbench.action.nextEditor"
+      ]
+    }
+  },
+  // Others
+  {
+    // Create new terminal
+    "key": "ctrl+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    // Kill focused terminal
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    // Create new file when focus is in the file explorer
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    // Create new folder when focus is in the file explorer
+    "key": "shift+cmd+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // Run tests
+  {
+    // Run test at the cursor
+    "key": "cmd+k t c",
+    "command": "testing.runAtCursor",
+    "when": "editorTextFocus"
+  },
+  {
+    // Debug test at the cursor
+    "key": "cmd+k t d c",
+    "command": "go.debug.cursor",
+    "when": "editorTextFocus"
+  },
+  {
+    // Rerun last test
+    "key": "cmd+k t l",
+    "command": "testing.reRunLastRun",
+    "when": "editorTextFocus"
+  },
+  {
+    // Debug last test
+    "key": "cmd+k t d l",
+    "command": "testing.debugLastRun",
+    "when": "editorTextFocus"
+  },
+  {
+    // Run tests at file
+    "key": "cmd+k t f",
+    "command": "testing.runCurrentFile",
+    "when": "editorTextFocus"
+  },
+  //
+  {
+    // opt+up/down is used for navigation, so we need a shortcut to duplicate lines.
+    "key": "cmd+shift+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "cmd+shift+o",
+    "command": "workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+k cmd+c",
+    "command": "copyRelativeFilePath"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    // Navigate back.
+    "key": "cmd+b",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    // Navigate forward
+    "key": "cmd+shift+b",
+    "command": "workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  // Go to definition
+  {
+    "key": "cmd+d",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "cmd+t",
+    "command": "editor.action.peekTypeDefinition"
+  },
+  {
+    "key": "cmd+k cmd+r",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  // {
+  //   "key": "cmd+k d",
+  //   "command": "editor.action.revealDefinition",
+  //   "when": "editorHasDefinitionProvider && editorTextFocus"
+  // },
+  {
+    "key": "cmd+i",
+    "command": "editor.action.goToImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus"
+  },
+  {
+    "key": "cmd+k r",
+    "command": "editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "down",
+    "command": "goToNextReference",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "up",
+    "command": "goToPreviousReference",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "alt+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  // Open search all files in a new editor
+  {
+    "key": "cmd+shift+f",
+    "command": "search.action.openEditor"
+  },
+  {
+    "key": "down",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  // {
+  //   "key": "alt+up",
+  //   "command": "history.showNext",
+  //   "when": "inSearchEditor"
+  // },
+  {
+    "key": "up",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "cmd+i",
+    "command": "search.action.focusFilesToInclude",
+    "when": "inSearchEditor"
+  },
+  //
+  // {
+  //   "key": "alt+m",
+  //   "command": "binaryJump.binaryRightJump"
+  // },
+  // {
+  //   "key": "alt+shift+m",
+  //   "command": "binaryJump.binaryLeftJump"
+  // },
+  {
+    // move to middle of line
+    "key": "alt+m",
+    "command": "cursorMove",
+    "args": {
+      "to": "wrappedLineColumnCenter"
+    }
+  },
+  {
+    "key": "cmd+shift+c",
+    "command": "copy-github-permalink.activate"
+  },
+  {
+    "key": "cmd+g",
+    "command": "workbench.action.gotoLine"
+  },
+  //
+  {
+    "key": "alt+shift+d",
+    "command": "cursorPageUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k up",
+    "command": "cursorTop",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+k down",
+    "command": "cursorBottom",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.terminal.focusAtIndex1"
+  },
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.terminal.focusAtIndex2"
+  },
+  {
+    "key": "cmd+3",
+    "command": "workbench.action.terminal.focusAtIndex3"
+  },
+  {
+    "key": "cmd+escape",
+    "command": "-claude-vscode.editor.open"
+  },
+  {
+    "key": "cmd+up",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+k cmd+b",
+    "command": "git.blame.toggleEditorDecoration"
+  },
+  {
+    "key": "cmd+k \\",
+    "command": "workbench.action.focusNextGroup"
+  }
+  // {
+  //   "key": "cmd+k cmd+k cmd+t",
+  //   "command": "runCommands",
+  //   "args": {
+  //     "commands": [
+  //       "workbench.action.createTerminalEditor",
+  //       "workbench.action.pinEditor",
+  //       {
+  //         "command": "workbench.action.terminal.renameWithArg",
+  //         "args": {
+  //           "name": "claude"
+  //         }
+  //       }
+  //     ]
+  //   }
+  // },
+]
+

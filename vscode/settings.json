@@ -1,0 +1,114 @@
+{
+  // "editor.rulers": [
+  //   80
+  // ],
+  "editor.lineDecorationsWidth": 40,
+  "editor.cursorSurroundingLines": 999, // cursor always in the center of the screen
+  "editor.detectIndentation": false,
+  "editor.folding": false,
+  "editor.fontSize": 16,
+  "editor.lineHeight": 1.75,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.lineHeight": 1.75,
+  "editor.fontFamily": "'Monaspace Neon', monospace",
+  "editor.fontWeight": "100",
+  "terminal.integrated.fontWeight": "100",
+  "editor.fontLigatures": "'calt', 'liga'",
+  "editor.formatOnSave": true,
+  "editor.lightbulb.enabled": "off",
+  "editor.minimap.enabled": false,
+  "editor.snippetSuggestions": "top",
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+  "git.mergeEditor": false,
+  "search.quickOpen.history.filterSortOrder": "recency",
+  "search.searchEditor.defaultNumberOfContextLines": 5,
+  "testing.automaticallyOpenPeekView": "never",
+  "window.newWindowDimensions": "inherit",
+  "window.nativeFullScreen": true,
+  "window.title": "${rootNameShort}",
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
+  },
+  "files.associations": {
+    "*.env.*": "env"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "go.enableCodeLens": {
+    "runtest": false
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "debug.internalConsoleOptions": "openOnSessionStart",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/src/mocks": true
+  },
+  "editor.stickyScroll.enabled": false,
+  "diffEditor.renderSideBySide": false,
+  "breadcrumbs.symbolPath": "off",
+  "window.zoomPerWindow": false,
+  "debug.toolBarLocation": "docked",
+  "editor.accessibilitySupport": "off",
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.blame.editorDecoration.enabled": true,
+  "extensions.ignoreRecommendations": true,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.12",
+  "terminal.integrated.tabs.enabled": false,
+  "workbench.sideBar.location": "right",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.layoutControl.enabled": false,
+  "git.blame.statusBarItem.enabled": true,
+  "window.zoomLevel": 1,
+  "chat.commandCenter.enabled": false,
+  "window.commandCenter": false,
+  "workbench.activityBar.location": "hidden",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "catppuccin.accentColor": "blue",
+  "catppuccin.workbenchMode": "flat",
+  "catppuccin.extraBordersEnabled": true,
+  // "editor.scrollbar.verticalScrollbarSize": 0,
+  // "editor.scrollbar.horizontalScrollbarSize": 0,
+  //
+  "workbench.colorCustomizations": {
+    "scrollbar.shadow": "#00000000",
+    "[Solarized Light]": {
+      "widget.shadow": "#00000000",
+      "widget.border": "#DDD6C1"
+    }
+  },
+  "editor.lineNumbers": "on",
+  "chat.agentSessionsViewLocation": "single-view",
+  "workbench.editor.showTabs": "none",
+  "workbench.statusBar.visible": false
+}
