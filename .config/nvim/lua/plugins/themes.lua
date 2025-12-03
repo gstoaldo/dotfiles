@@ -16,6 +16,5 @@ return {
 	},
 	{ "projekt0n/github-nvim-theme", name = "github-theme" },
 	{ "rose-pine/neovim", name = "rose-pine" },
-	{ "sainnhe/gruvbox-material" },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 }
