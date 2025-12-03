@@ -3,7 +3,7 @@ return {
 	opts = {
 		picker = {
 			enabled = true,
-			layout = "vscode",
+			layout = "ivy_split",
 		},
 	},
 }

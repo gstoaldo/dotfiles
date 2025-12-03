@@ -2,9 +2,7 @@
 local snacks = require("snacks")
 
 vim.keymap.set("n", "<C-p>", snacks.picker.git_files)
-vim.keymap.set("n", "<C-f>", function()
-	snacks.picker.grep({ layout = "dropdown" })
-end)
+vim.keymap.set("n", "<C-f>", snacks.picker.grep)
 vim.keymap.set("n", "<C-g>", snacks.picker.git_status)
 
 -- Debugger
