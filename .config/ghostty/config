@@ -7,6 +7,7 @@ window-padding-balance = true
 window-padding-x = 32
 window-padding-y = 8
 mouse-hide-while-typing = true
+macos-option-as-alt = true
 
 theme = TokyoNight Night
 theme = Catppuccin Latte
