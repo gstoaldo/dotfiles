@@ -1,4 +1,5 @@
 ---@diagnostic disable-next-line: undefined-global
+---theme = Everforest Dark Hard
 vim = vim
 
 vim.opt.swapfile = false
@@ -28,9 +29,6 @@ vim.opt.smartcase = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.expandtab = true
-
--- Show diagnostics inline
-vim.diagnostic.config({ virtual_text = true })
 
 -- The "path" option allows us to specify a set of directories inside of which Vim
 -- will search when the :find command is invoked
@@ -64,18 +62,27 @@ vim.keymap.set("n", "<leader><tab>", "<cmd>b#<CR>")
 
 -- Set color scheme
 vim.o.termguicolors = true
-vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("vague")
+vim.cmd.colorscheme("catppuccin-latte")
 
 -- LSP
 vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition)
-vim.keymap.set("n", "<leader>D", vim.lsp.buf.declaration)
 vim.keymap.set("n", "<leader>i", vim.lsp.buf.implementation)
 vim.keymap.set("n", "<leader>r", vim.lsp.buf.references)
 vim.keymap.set("n", "<leader>T", vim.lsp.buf.type_definition)
 vim.keymap.set("n", "<leader>R", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setqflist)
 vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action)
+
+-- Diagnostics
+
+-- Show diagnostics inline
+vim.diagnostic.config({ virtual_text = true })
+
+vim.keymap.set("n", "<leader>D", function()
+	vim.diagnostic.open_float(nil, { focus = false })
+end, { desc = "Line diagnostics" })
 
 -- Copy path to clipboard and visual selection range
 vim.keymap.set("v", "<leader>c", function()

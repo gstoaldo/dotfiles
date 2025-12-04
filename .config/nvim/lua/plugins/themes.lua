@@ -11,10 +11,8 @@ return {
 		config = true,
 		opts = {},
 	},
-	{
-		"vague2k/vague.nvim",
-	},
-	{ "projekt0n/github-nvim-theme", name = "github-theme" },
+	{ "vague2k/vague.nvim", priority = 1000 },
 	{ "rose-pine/neovim", name = "rose-pine" },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "sainnhe/everforest" },
 }

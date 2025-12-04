@@ -10,5 +10,9 @@ mouse-hide-while-typing = true
 macos-option-as-alt = true
 
 theme = TokyoNight Night
-theme = Catppuccin Latte
 theme = Catppuccin Mocha
+theme = Vague
+theme = Catppuccin Latte
+
+# everforest background
+# background = 2D353B
