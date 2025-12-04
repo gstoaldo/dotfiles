@@ -1,5 +1,4 @@
 ---@diagnostic disable-next-line: undefined-global
----theme = Everforest Dark Hard
 vim = vim
 
 vim.opt.swapfile = false
@@ -63,7 +62,6 @@ vim.keymap.set("n", "<leader><tab>", "<cmd>b#<CR>")
 -- Set color scheme
 vim.o.termguicolors = true
 vim.cmd.colorscheme("vague")
-vim.cmd.colorscheme("catppuccin-latte")
 
 -- LSP
 vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover)
@@ -83,6 +81,13 @@ vim.diagnostic.config({ virtual_text = true })
 vim.keymap.set("n", "<leader>D", function()
 	vim.diagnostic.open_float(nil, { focus = false })
 end, { desc = "Line diagnostics" })
+
+vim.keymap.set("n", "<leader>c", function()
+	local relative_path = vim.fn.expand("%:.")
+
+	vim.fn.setreg("+", relative_path)
+	print("Copied: " .. relative_path)
+end)
 
 -- Copy path to clipboard and visual selection range
 vim.keymap.set("v", "<leader>c", function()
@@ -139,5 +144,8 @@ end)
 vim.keymap.set("n", "<leader>jj", function()
 	create_terminal("term:general")
 end)
+
+-- Go back to previous buffer
+vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-^>")
 
 require("keymaps")

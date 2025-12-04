@@ -11,8 +11,8 @@ macos-option-as-alt = true
 
 theme = TokyoNight Night
 theme = Catppuccin Mocha
-theme = Vague
 theme = Catppuccin Latte
+theme = Vague
 
 # everforest background
 # background = 2D353B
