@@ -51,7 +51,7 @@ vim.keymap.set({ "n", "v" }, "J", "5j", { noremap = true })
 vim.keymap.set("n", "<leader>x", "<cmd>bdelete<CR>")
 
 -- Toggle file explorer or go to previous buffer
-vim.keymap.set("n", "<leader><tab>", "<cmd>b#<CR>")
+vim.keymap.set("n", "<tab>", "<cmd>b#<CR>")
 
 -- Focus window
 -- vim.keymap.set("n", "<C-h>", "<C-w>h")
