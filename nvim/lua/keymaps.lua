@@ -8,11 +8,12 @@ vim.keymap.set("n", "<C-p>", function()
 end)
 vim.keymap.set("n", "<C-f>", snacks.picker.grep)
 vim.keymap.set("n", "<C-g>", snacks.picker.git_status)
+vim.keymap.set("n", "<leader><leader>", snacks.picker.buffers)
 
 -- Debugger
 local dap = require("dap")
 
-local prefix = "<leader><leader>"
+local prefix = "<leader>z"
 
 local maps = {
 	p = dap.continue,
