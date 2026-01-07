@@ -29,3 +29,7 @@ local maps = {
 for key, fn in pairs(maps) do
 	vim.keymap.set("n", prefix .. key, fn)
 end
+
+-- Git
+local gitsigns = require("gitsigns")
+vim.keymap.set("n", "<leader>b", gitsigns.toggle_current_line_blame)

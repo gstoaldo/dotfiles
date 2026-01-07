@@ -93,7 +93,6 @@
     "markdown": false,
     "scminput": false
   },
-  "workbench.colorTheme": "Catppuccin Mocha",
   "catppuccin.accentColor": "blue",
   "catppuccin.workbenchMode": "flat",
   "catppuccin.extraBordersEnabled": true,
@@ -110,5 +109,6 @@
   "editor.lineNumbers": "on",
   "chat.agentSessionsViewLocation": "single-view",
   "workbench.editor.showTabs": "none",
-  "workbench.statusBar.visible": false
+  "workbench.statusBar.visible": false,
+  "workbench.colorTheme": "GitHub Dark Default"
 }
