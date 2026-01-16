@@ -35,12 +35,6 @@
   "files.associations": {
     "*.env.*": "env"
   },
-  "[go]": {
-    "editor.defaultFormatter": "golang.go"
-  },
-  "go.enableCodeLens": {
-    "runtest": false
-  },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -56,7 +50,6 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "go.toolsManagement.autoUpdate": true,
   "debug.internalConsoleOptions": "openOnSessionStart",
   "files.exclude": {
     "**/.git": true,
@@ -74,7 +67,7 @@
   "debug.toolBarLocation": "docked",
   "editor.accessibilitySupport": "off",
   "security.workspace.trust.untrustedFiles": "open",
-  "git.blame.editorDecoration.enabled": true,
+  "git.blame.editorDecoration.enabled": false,
   "extensions.ignoreRecommendations": true,
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.12",
@@ -88,7 +81,7 @@
   "window.commandCenter": false,
   "workbench.activityBar.location": "hidden",
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false
@@ -110,5 +103,6 @@
   "chat.agentSessionsViewLocation": "single-view",
   "workbench.editor.showTabs": "none",
   "workbench.statusBar.visible": false,
-  "workbench.colorTheme": "GitHub Dark Default"
+  "workbench.colorTheme": "GitHub Light",
+  "go.toolsManagement.autoUpdate": true
 }

@@ -64,10 +64,13 @@ vim.o.termguicolors = true
 vim.cmd.colorscheme("vague")
 
 -- LSP
+local snacks = require("snacks")
+
 vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition)
 vim.keymap.set("n", "<leader>i", vim.lsp.buf.implementation)
-vim.keymap.set("n", "<leader>r", vim.lsp.buf.references)
+-- vim.keymap.set("n", "<leader>r", vim.lsp.buf.references)
+vim.keymap.set("n", "<leader>r", snacks.picker.lsp_references)
 vim.keymap.set("n", "<leader>T", vim.lsp.buf.type_definition)
 vim.keymap.set("n", "<leader>R", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setqflist)

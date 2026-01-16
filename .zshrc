@@ -149,3 +149,9 @@ browse_projects() {
 alias p=browse_projects
 
 export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"
+
+eval "$(fzf --zsh)"   # for zsh

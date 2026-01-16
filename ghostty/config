@@ -16,3 +16,5 @@ theme = Vague
 
 # everforest background
 # background = 2D353B
+
+macos-titlebar-style = hidden
