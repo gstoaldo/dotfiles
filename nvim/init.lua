@@ -61,14 +61,15 @@ vim.keymap.set("n", "<tab>", "<cmd>b#<CR>")
 
 -- Set color scheme
 vim.o.termguicolors = true
-vim.cmd.colorscheme("vague")
+vim.cmd.colorscheme("tokyonight-night")
 
 -- LSP
 local snacks = require("snacks")
 
 vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition)
-vim.keymap.set("n", "<leader>i", vim.lsp.buf.implementation)
+-- vim.keymap.set("n", "<leader>i", vim.lsp.buf.implementation)
+vim.keymap.set("n", "<leader>i", snacks.picker.lsp_implementations)
 -- vim.keymap.set("n", "<leader>r", vim.lsp.buf.references)
 vim.keymap.set("n", "<leader>r", snacks.picker.lsp_references)
 vim.keymap.set("n", "<leader>T", vim.lsp.buf.type_definition)
@@ -117,11 +118,6 @@ vim.keymap.set({ "n", "v" }, "<leader>C", ":GBrowse!<CR>")
 
 -- Terminal mode
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
-
--- Quickfix list
-vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>")
-vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>")
-vim.keymap.set("n", "<leader>q", "<cmd>cclose<CR>")
 
 -- Toggle comment
 vim.keymap.set("n", "<C-_>", "gcc", { remap = true })

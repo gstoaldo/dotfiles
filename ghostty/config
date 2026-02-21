@@ -7,14 +7,16 @@ window-padding-balance = true
 window-padding-x = 32
 window-padding-y = 8
 mouse-hide-while-typing = true
-macos-option-as-alt = true
+# macos-option-as-alt = true
 
 theme = TokyoNight Night
-theme = Catppuccin Mocha
-theme = Catppuccin Latte
-theme = Vague
+# theme = Catppuccin Mocha
+# theme = Catppuccin Latte
+# theme = Vague
 
 # everforest background
 # background = 2D353B
 
 macos-titlebar-style = hidden
+
+
